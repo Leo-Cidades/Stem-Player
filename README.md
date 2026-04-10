@@ -3,7 +3,7 @@
 # Stem Player
 ### Simulador virtual de un proyecto físico
 
-Proyecto web ejecutado con **Node.js** que permite cargar una canción separada en **4 pistas** y controlarlas desde una interfaz local.
+Proyecto web ejecutado con **Node.js** que permite cargar, reproducir y mezclar una canción separada en **4 pistas** desde una interfaz local.
 
 </div>
 
@@ -184,12 +184,24 @@ Desde la interfaz puedes:
 
 ## Atajos de teclado
 
-El simulador también permite alternar mute rápidamente:
+El simulador incluye atajos de teclado para **mutear y desmutear** rápidamente las pistas:
 
 - `1` → vocals
 - `2` → other
 - `3` → bass
 - `4` → drums
+
+Cada tecla alterna entre **mute** y **unmute** de su pista correspondiente.
+
+---
+
+## Recomendación para obtener stems
+
+Para probar mejor el simulador, se recomienda usar **Stem Roller** para separar canciones en pistas.
+
+Enlace:
+
+- https://www.stemroller.com/
 
 ---
 
@@ -215,7 +227,6 @@ Sin embargo, este repositorio está enfocado únicamente en la **versión virtua
 Desarrollado por:
 
 - **Leonel Cidades**
-- **Tobias Godoy**
 
 Materia: **Computadoras Electrónicas**
 
@@ -226,4 +237,3 @@ Materia: **Computadoras Electrónicas**
 **Stem Player** es un **simulador virtual de un proyecto físico** realizado para funcionar con un **Node server**.
 
 Permite cargar canciones separadas en cuatro pistas y controlarlas desde una interfaz web local.
-
