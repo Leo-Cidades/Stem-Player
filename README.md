@@ -3,7 +3,7 @@
 # Stem Player
 ### Simulador virtual de un proyecto físico
 
-Proyecto web ejecutado con **Node.js** que permite cargar, reproducir y mezclar una canción separada en **4 pistas** desde una interfaz local.
+Aplicación web local hecha con **Node.js** para cargar, reproducir y mezclar canciones separadas en **4 pistas** desde una interfaz simple.
 
 </div>
 
@@ -11,38 +11,34 @@ Proyecto web ejecutado con **Node.js** que permite cargar, reproducir y mezclar 
 
 ## Descripción
 
-Este repositorio contiene **solo la parte del simulador virtual** del proyecto **Stem Player**.
+Este repositorio contiene **solo el simulador virtual** del proyecto **Stem Player**.
 
-El proyecto original fue concebido como un dispositivo físico con controles dedicados, pero esta versión está orientada a la **simulación en PC** mediante un **Node server** y una interfaz web local.
+El proyecto original nació como una idea física, pero esta versión está pensada para usarse desde la computadora, ejecutándose con un **Node server** y una interfaz web local.
 
-La aplicación permite trabajar con una canción separada en cuatro stems:
+El simulador permite trabajar con canciones separadas en estas 4 pistas:
 
 - **vocals**
 - **other**
 - **bass**
 - **drums**
 
-Desde la interfaz se pueden reproducir las pistas en simultáneo, mutearlas, cambiar sus volúmenes, navegar entre canciones y guardar presets de mezcla.
+Desde la interfaz se pueden reproducir las pistas en simultáneo, mutearlas, ajustar el volumen de cada una y moverse entre canciones o carpetas.
 
 > El ZIP del proyecto contiene el código del programa correspondiente a esta versión virtual.
 
 ---
 
-## ¿Qué hace este simulador?
+## Funciones
 
-El simulador permite probar digitalmente la lógica del proyecto sin depender del armado físico.
-
-Entre sus funciones principales están:
-
-- reproducción sincronizada de 4 pistas
-- control de volumen independiente por pista
-- mute / unmute por pista
-- play / pausa
-- pista anterior y siguiente
-- rebobinado y avance rápido
-- barra de progreso
-- carga de una carpeta individual o de una carpeta principal con subcarpetas
-- guardado y aplicación de presets de volumen
+- Reproducción sincronizada de 4 pistas
+- Control de volumen independiente por pista
+- Mute / unmute por pista
+- Play / pausa
+- Canción anterior y siguiente
+- Rebobinado y avance rápido
+- Barra de progreso
+- Carga de una carpeta individual o de una carpeta principal con subcarpetas
+- Guardado y aplicación de presets de volumen
 
 ---
 
@@ -63,60 +59,39 @@ Entre sus funciones principales están:
 .
 ├── server.js
 ├── package-lock.json
-├── node_modules/
 └── public/
     ├── index.html
     ├── scripts.js
     └── styles.css
 ```
 
-### Archivos principales
-
-- **server.js**  
-  Inicia el servidor local en el puerto `3000` y sirve los archivos estáticos.
-
-- **public/index.html**  
-  Contiene la estructura visual del reproductor.
-
-- **public/scripts.js**  
-  Maneja la lógica del simulador: carga de carpetas, reproducción, volumen, mute, presets y navegación.
-
-- **public/styles.css**  
-  Define el estilo visual de la interfaz.
-
 ---
 
 ## Requisitos
 
-Para ejecutar el simulador necesitas:
+Solo necesitas:
 
 - **Node.js** instalado
-- un navegador moderno compatible con selección de carpetas  
-  **Recomendado:** Google Chrome o Microsoft Edge
+- un navegador moderno  
+  Recomendado: **Google Chrome** o **Microsoft Edge**
 
 ---
 
 ## Instalación
 
-### Opción 1: usar el ZIP tal como está
-
-Extrae el archivo ZIP del proyecto en una carpeta local.
-
-En el ZIP ya se incluye el código del programa, junto con los archivos necesarios para correr esta versión virtual.
-
-### Opción 2: reinstalar dependencias manualmente
-
-Si necesitas reinstalar la dependencia principal, ejecuta:
+1. Descarga o extrae el ZIP del proyecto.
+2. Abre una terminal dentro de la carpeta del proyecto.
+3. Ejecuta:
 
 ```bash
-npm install express
+npm install
 ```
 
 ---
 
 ## Ejecución
 
-Abre una terminal dentro de la carpeta del proyecto y corre:
+Con el proyecto ya instalado, inicia el servidor con:
 
 ```bash
 node server.js
@@ -132,23 +107,19 @@ http://localhost:3000/
 
 ## Uso
 
-### 1. Iniciar la aplicación
+### 1. Abrir una canción
 
-Ejecuta el servidor y abre la interfaz en el navegador.
-
-### 2. Cargar una canción
-
-La interfaz ofrece dos formas de carga:
+La interfaz ofrece dos opciones:
 
 - **Abrir Carpeta Principal**  
-  Permite seleccionar una carpeta que contenga varias subcarpetas, cada una con una canción.
+  Para cargar una carpeta que contenga varias subcarpetas, cada una con una canción.
 
 - **Abrir Carpeta Específica**  
-  Permite abrir directamente una sola carpeta de canción.
+  Para cargar directamente una sola canción.
 
-### 3. Formato esperado de las pistas
+### 2. Formato esperado
 
-Cada canción debe estar organizada en una carpeta con estas cuatro pistas:
+Cada canción debe estar dentro de una carpeta con estas 4 pistas:
 
 ```bash
 Cancion/
@@ -165,18 +136,17 @@ También pueden usarse otros formatos compatibles con el navegador, siempre que 
 - `bass`
 - `drums`
 
-### 4. Controles disponibles
+### 3. Controles disponibles
 
 Desde la interfaz puedes:
 
 - reproducir y pausar
-- avanzar a la siguiente canción
-- volver a la canción anterior
+- ir a la canción anterior o siguiente
 - rebobinar
 - adelantar
 - mover la barra de progreso
-- mutear pistas individuales
-- ajustar volumen por pista
+- mutear o desmutear cada pista
+- ajustar el volumen de cada pista
 - guardar un preset
 - aplicar un preset guardado
 
@@ -184,32 +154,20 @@ Desde la interfaz puedes:
 
 ## Atajos de teclado
 
-El simulador incluye atajos de teclado para **mutear y desmutear** rápidamente las pistas:
+También hay atajos para **mutear y desmutear** pistas rápidamente:
 
 - `1` → vocals
 - `2` → other
 - `3` → bass
 - `4` → drums
 
-Cada tecla alterna entre **mute** y **unmute** de su pista correspondiente.
-
 ---
 
-## Recomendación para obtener stems
+## Recomendación
 
-Para probar mejor el simulador, se recomienda usar **Stem Roller** para separar canciones en pistas.
+Para conseguir canciones separadas en pistas, se recomienda usar **Stem Roller**:
 
-Enlace:
-
-- https://www.stemroller.com/
-
----
-
-## Relación con el proyecto físico
-
-Este simulador virtual forma parte de un proyecto más amplio que originalmente contemplaba controles físicos y comunicación con ESP32.
-
-Sin embargo, este repositorio está enfocado únicamente en la **versión virtual ejecutada desde Node.js**, por lo que puede probarse sin montar el hardware.
+[https://www.stemroller.com/](https://www.stemroller.com/)
 
 ---
 
@@ -217,8 +175,7 @@ Sin embargo, este repositorio está enfocado únicamente en la **versión virtua
 
 - El proyecto está pensado para ejecutarse en entorno local.
 - Si falta alguna de las 4 pistas, la canción no podrá cargarse correctamente.
-- La interfaz incluye lógica relacionada con ESP32, pero no es necesaria para probar el simulador virtual.
-- La experiencia depende de que las carpetas estén bien organizadas.
+- La organización correcta de las carpetas es importante para que el simulador funcione bien.
 
 ---
 
@@ -228,10 +185,12 @@ Desarrollado por:
 
 - **Leonel Cidades**
 
+Materia: **Computadoras Electrónicas**
+
 ---
 
 ## Resumen
 
-**Stem Player** es un **simulador virtual de un proyecto físico** realizado para funcionar con un **Node server**.
+**Stem Player** es un **simulador virtual de un proyecto físico** realizado para funcionar con **Node.js**.
 
-Permite cargar canciones separadas en cuatro pistas y controlarlas desde una interfaz web local.
+Permite cargar canciones separadas en cuatro pistas y controlarlas desde una interfaz web local de forma simple.
