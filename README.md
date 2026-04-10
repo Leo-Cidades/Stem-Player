@@ -91,10 +91,10 @@ npm install
 
 ## Ejecución
 
-Con el proyecto ya instalado, inicia el servidor con:
+Con el proyecto ya instalado, inicia el servidor con el comando:
 
 ```bash
-node server.js
+node server
 ```
 
 Luego abre en el navegador:
