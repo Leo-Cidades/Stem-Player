@@ -228,8 +228,6 @@ Desarrollado por:
 
 - **Leonel Cidades**
 
-Materia: **Computadoras Electrónicas**
-
 ---
 
 ## Resumen
