@@ -184,13 +184,3 @@ Para conseguir canciones separadas en pistas, se recomienda usar **Stem Roller**
 Desarrollado por:
 
 - **Leonel Cidades**
-
-Materia: **Computadoras Electrónicas**
-
----
-
-## Resumen
-
-**Stem Player** es un **simulador virtual de un proyecto físico** realizado para funcionar con **Node.js**.
-
-Permite cargar canciones separadas en cuatro pistas y controlarlas desde una interfaz web local de forma simple.
